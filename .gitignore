@@ -1,0 +1,8 @@
+# Rust build artifacts
+/target
+*.pdb
+
+# Planning & System Specification Documents (Local Only - Never Commit)
+decisions.md
+spec.md
+plan.md
