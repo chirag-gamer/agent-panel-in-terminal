@@ -1,87 +1,35 @@
 # Project: agent-panel-in-terminal
 
-`agent-panel-in-terminal` is a native, ultra-lightweight Windows command panel for instantly switching and launching AI coding agents directly from Windows Terminal (`wt.exe`) or Command Prompt (`cmd.exe`).
+`agent-panel-in-terminal` is a native, ultra-lightweight Windows Terminal extension that surfaces AI coding agents directly inside the Windows Terminal new tab (`+`) dropdown menu.
 
-## 1. Supported Agent Ecosystem
+## 1. Architectural Model
 
-The application supports the following agent CLIs:
+- **Native Windows Terminal Integration**: Integrates directly into Windows Terminal's native `settings.json` (`newTabMenu` feature).
+- **No Background Footprint**: Runs zero background daemons, zero system tray icons, zero global hotkeys, zero external overlay windows, and zero console injection hacks.
+- **Dropdown Layout**:
+  - Displays 2–4 user-chosen agent entries directly in the `+` dropdown.
+  - Each agent entry is a submenu (`folder`) containing:
+    - **"Open here"**: Injects and runs the agent in the currently focused tab via an `action` entry (`sendInput`).
+    - **"Open in new tab"**: Spawns a fresh tab running the agent via a `profile` entry (`commandline`).
+  - **"Customize…" Entry**: Launches a lightweight, standalone settings GUI to choose which agents appear in the dropdown, select models, or manually configure custom commands. Spawns detached with `closeOnExit: "always"` to leave no lingering tab.
 
-| Agent Name | CLI Binary | Default Model List | Effort Flag | Permissions Flag |
-|---|---|---|---|---|
-| **Antigravity** | `agy` | `gemini-3.8-flash-high`, `gemini-3-flash`, `claude-sonnet-4-6` | `--effort <low\|medium\|high>` | `--dangerously-skip-permissions` |
-| **Claude** | `claude` | `claude-opus-4-6-thinking`, `claude-sonnet-4-6`, `claude-haiku-4-5` | `--effort <low\|medium\|high>` | `--dangerously-skip-permissions` |
-| **OpenClaude** | `openclaude` | `custom-openai`, `custom-gemini`, `local-ollama` | Config-based | Auto-approved |
-| **Codex** | `codex` | `codex-5-pro`, `codex-4.5`, `gpt-5-turbo` | Config-based | `--full-access` |
-| **GitHub Copilot** | `gh copilot` | `copilot-chat`, `gpt-4o` | Config-based | Default |
-| **OpenCode** | `opencode` | `default`, `custom` | Config-based | Auto-approved |
-| **openclaw** | `openclaw` | `claw-v1`, `local` | Config-based | `--sandbox` |
+## 2. Zero Hardcoding Policy
 
-## 2. Configuration Schema (`agents.json`)
+This tool is designed as a public, modular product:
+- **No Hardcoded Agents**: Agents are detected from the user's installed CLIs or added manually.
+- **No Hardcoded Models**: Models are discovered dynamically from the user's active environment or entered manually in the Customize GUI.
+- **Modular Schema**: Configuration stores user-defined or discovered agents and compiles them surgically into the user's `settings.json`.
 
-All agent definitions are persisted in a JSON file at `%APPDATA%\agent-panel-in-terminal\agents.json`:
+## 3. Configuration & Isolation
 
-```json
-{
-  "active_agents": [
-    "antigravity",
-    "claude",
-    "openclaude",
-    "codex",
-    "copilot",
-    "opencode",
-    "openclaw"
-  ],
-  "available_agents": [],
-  "agents": {
-    "antigravity": {
-      "display_name": "Antigravity",
-      "command": "agy",
-      "models": [
-        "gemini-3.8-flash-high",
-        "gemini-3.5-flash-lite",
-        "gemini-3.1-flash-lite",
-        "gemini-3.1-flash-image",
-        "gemini-3-flash",
-        "claude-sonnet-4-6",
-        "claude-opus-4-6-thinking"
-      ],
-      "effort_flag": "--effort",
-      "permissions_flag": "--dangerously-skip-permissions"
-    },
-    "claude": {
-      "display_name": "Claude",
-      "command": "claude",
-      "models": [
-        "claude-opus-4-6-thinking",
-        "claude-sonnet-4-6",
-        "claude-haiku-4-5"
-      ],
-      "effort_flag": "--effort",
-      "permissions_flag": "--dangerously-skip-permissions"
-    }
-  }
-}
-```
-
-## 3. UI Controls & Interactions
-
-1. **Left Dropdown**: Displays list of enabled agents. Clicking or hovering an agent opens the right flyout.
-2. **Right Flyout**:
-   - **Model Search Bar**: Live filter on available models for that agent.
-   - **Model Selection**: Radio-style selection with checkmark (optional).
-   - **Effort Buttons**: `Low` | `Med` | `High`.
-   - **Permissions Selector**: `Full access` | `Default`.
-   - **Actions**:
-     - `Start here`: Injects into active console/terminal or runs directly in stdio.
-     - `Start in new tab`: Opens a new tab in Windows Terminal or launches a new CMD window.
-3. **Agent Settings**:
-   - Opens the reorder/enablement GUI.
-   - Top list shows active panel agents.
-   - Bottom list shows available agents.
-   - Clicking an available agent moves it up into the active panel list.
+- **Isolated Settings Mutation**: The tool modifies only its own tagged entries in `settings.json`:
+  - Tagged `actions` (`AgentPanel.*`)
+  - Tagged hidden `profiles` (`AgentPanel.*`)
+  - Tagged `newTabMenu` folder entries
+- **Automatic Live Reload**: Windows Terminal automatically detects file modifications and updates the dropdown menu in real time without restart.
+- **Safety First**: Prior to any write, `settings.json` is automatically backed up with a timestamp.
 
 ## 4. Repository & Version Control Rules
 
 - **Markdown Policy**: Only `AGENTS.md` is committed and tracked in the Git repository.
 - **Local-Only Documents**: All internal planning, decision, and specification markdown files (`decisions.md`, `spec.md`, `plan.md`) are strictly local and ignored by Git via `.gitignore`.
-
