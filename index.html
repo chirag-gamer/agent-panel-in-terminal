@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agent Panel</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header>
+      <span class="title">Agent Panel</span>
+      <button id="theme-toggle" class="btn ghost" title="Toggle dark/light theme">Theme ◐</button>
+    </header>
+
+    <main>
+      <section>
+        <h2>In the dropdown</h2>
+        <div id="active-list"></div>
+      </section>
+
+      <section>
+        <h2>Available <span class="muted">(detected on this machine)</span></h2>
+        <div id="available-list"></div>
+        <div id="manual-form" class="manual-form"></div>
+        <button id="add-manual" class="btn ghost">+ Add manually</button>
+      </section>
+    </main>
+
+    <footer>
+      <div class="actions">
+        <button id="apply" class="btn accent">Apply</button>
+        <button id="restore" class="btn">Restore backup</button>
+        <button id="quit" class="btn">Quit</button>
+      </div>
+      <div id="status" class="status">Ready.</div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

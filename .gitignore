@@ -1,8 +1,20 @@
 # Rust build artifacts
-/target
+/src-tauri/target
+/src-tauri/gen/schemas
+/src-tauri/binaries
 *.pdb
 
-# Planning & System Specification Documents (Local Only - Never Commit)
-decisions.md
-spec.md
-plan.md
+# Node
+node_modules/
+dist/
+
+# Local research & specification files (only AGENTS.md tracked in Git)
+*.md
+!AGENTS.md
+*.txt
+
+# Local test evidence screenshots
+/shot-*.png
+
+# Old fltk project (read-only reference, untracked)
+old/

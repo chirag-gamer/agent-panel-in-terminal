@@ -1,0 +1,268 @@
+{
+  "checked_date": "2026-11-13",
+  "counts": {
+    "requested": 32,
+    "obtained": 31,
+    "svg": 25,
+    "png": 6,
+    "not_found": 1
+  },
+  "logos": [
+    {
+      "id": "claude-code",
+      "file": "claude-code.svg",
+      "source_url": "https://cdn.simpleicons.org/claude",
+      "format": "svg",
+      "official": true,
+      "notes": "Claude starburst brand mark via Simple Icons, which sources official vendor marks. Represents Anthropic Claude Code."
+    },
+    {
+      "id": "codex",
+      "file": "codex.svg",
+      "source_url": "https://openai.com/favicon.svg",
+      "format": "svg",
+      "official": true,
+      "notes": "Official OpenAI mark from openai.com. Parent-brand logo; OpenAI Codex CLI does not publish a separate product mark."
+    },
+    {
+      "id": "gemini",
+      "file": "gemini.svg",
+      "source_url": "https://cdn.simpleicons.org/googlegemini",
+      "format": "svg",
+      "official": true,
+      "notes": "Google Gemini sparkle mark via Simple Icons (official brand mark)."
+    },
+    {
+      "id": "copilot",
+      "file": "copilot.svg",
+      "source_url": "https://cdn.simpleicons.org/githubcopilot",
+      "format": "svg",
+      "official": true,
+      "notes": "GitHub Copilot mark via Simple Icons (official brand mark)."
+    },
+    {
+      "id": "cursor",
+      "file": "cursor.svg",
+      "source_url": "https://cdn.simpleicons.org/cursor",
+      "format": "svg",
+      "official": true,
+      "notes": "Cursor cube mark via Simple Icons (official brand mark)."
+    },
+    {
+      "id": "aider",
+      "file": "aider.png",
+      "source_url": "https://github.com/Aider-AI.png?size=256",
+      "format": "png",
+      "official": true,
+      "notes": "Aider-AI GitHub organization avatar (official project avatar), 256x256 PNG."
+    },
+    {
+      "id": "opencode",
+      "file": "opencode.svg",
+      "source_url": "https://cdn.simpleicons.org/opencode",
+      "format": "svg",
+      "official": true,
+      "notes": "OpenCode square logomark via Simple Icons (official brand mark)."
+    },
+    {
+      "id": "crush",
+      "file": "crush.png",
+      "source_url": "https://raw.githubusercontent.com/charmbracelet/crush/main/internal/ui/notification/crush-icon.png",
+      "format": "png",
+      "official": true,
+      "notes": "Official Crush icon shipped in the charmbracelet/crush repository, 512x512 PNG."
+    },
+    {
+      "id": "qwen",
+      "file": "qwen.svg",
+      "source_url": "https://cdn.simpleicons.org/qwen",
+      "format": "svg",
+      "official": true,
+      "notes": "Qwen logomark via Simple Icons (official Alibaba Qwen brand mark)."
+    },
+    {
+      "id": "goose",
+      "file": "goose.svg",
+      "source_url": "https://raw.githubusercontent.com/block/goose/main/documentation/static/img/logo.svg",
+      "format": "svg",
+      "official": true,
+      "notes": "Official goose logo from the block/goose repository documentation assets."
+    },
+    {
+      "id": "droid",
+      "file": "droid.svg",
+      "source_url": "https://www.factory.ai/favicon.svg",
+      "format": "svg",
+      "official": true,
+      "notes": "Official Factory favicon/brand mark from factory.ai, 508x508 viewBox."
+    },
+    {
+      "id": "kiro",
+      "file": "kiro.svg",
+      "source_url": "https://kiro.dev/icon.svg",
+      "format": "svg",
+      "official": true,
+      "notes": "Official Kiro app mark from kiro.dev, 1200x1200 viewBox with brand purple tile."
+    },
+    {
+      "id": "qoder",
+      "file": "qoder.svg",
+      "source_url": "https://qoder.com/favIcon.svg",
+      "format": "svg",
+      "official": true,
+      "notes": "Official Qoder logomark from qoder.com, 206x206 viewBox."
+    },
+    {
+      "id": "trae",
+      "file": "trae.svg",
+      "source_url": "https://cdn.simpleicons.org/trae",
+      "format": "svg",
+      "official": true,
+      "notes": "TRAE mark via Simple Icons (official brand mark)."
+    },
+    {
+      "id": "codebuddy",
+      "file": "codebuddy.svg",
+      "source_url": "https://download.codebuddy.cn/web/website/8e036eb06f87c6b08437546b3cbd58e60af45b10/assets/logo.svg",
+      "format": "svg",
+      "official": true,
+      "notes": "Official Tencent CodeBuddy logo.svg from the codebuddy.cn site (official CDN)."
+    },
+    {
+      "id": "comate",
+      "file": "comate.png",
+      "source_url": "https://now.bdstatic.com/store/v2/f14cbf5/frontend/1bd615f//_next/static/media/BaiduComateLogo-D.c25de611.png",
+      "format": "png",
+      "official": true,
+      "notes": "Official Baidu Comate wordmark used in the comate.baidu.com header, 232x112 PNG."
+    },
+    {
+      "id": "vibe",
+      "file": "vibe.svg",
+      "source_url": "https://mistral.ai/favicon.svg",
+      "format": "svg",
+      "official": true,
+      "notes": "Confirmed product is Mistral Vibe (mistralai/mistral-vibe). Uses the official Mistral five-color mark; Vibe publishes no separate vector logo (README uses an ASCII mark). Parent-brand logo."
+    },
+    {
+      "id": "antigravity",
+      "file": "antigravity.svg",
+      "source_url": "https://antigravity.google/favicon.svg",
+      "format": "svg",
+      "official": true,
+      "notes": "Official Google Antigravity favicon/brand mark from antigravity.google, 136x136 viewBox."
+    },
+    {
+      "id": "minimax",
+      "file": "minimax.svg",
+      "source_url": "https://cdn.simpleicons.org/minimax",
+      "format": "svg",
+      "official": true,
+      "notes": "MiniMax logomark via Simple Icons (official brand mark)."
+    },
+    {
+      "id": "costrict",
+      "file": "costrict.png",
+      "source_url": "https://raw.githubusercontent.com/zgsm-ai/costrict/main/assets/images/shenma_robot_logo_big.png",
+      "format": "png",
+      "official": true,
+      "notes": "Official CoStrict logo from the zgsm-ai/costrict repository README asset, 128x128 PNG."
+    },
+    {
+      "id": "warp",
+      "file": "warp.svg",
+      "source_url": "https://cdn.simpleicons.org/warp",
+      "format": "svg",
+      "official": true,
+      "notes": "Warp terminal mark via Simple Icons (official brand mark, #01A4FF)."
+    },
+    {
+      "id": "devin",
+      "file": "devin.svg",
+      "source_url": "https://devin.ai/favicon.svg",
+      "format": "svg",
+      "official": true,
+      "notes": "Official Cognition Devin logomark from devin.ai, 425x425 viewBox."
+    },
+    {
+      "id": "cline",
+      "file": "cline.svg",
+      "source_url": "https://cdn.simpleicons.org/cline",
+      "format": "svg",
+      "official": true,
+      "notes": "Cline robot mark via Simple Icons (official brand mark)."
+    },
+    {
+      "id": "kilo",
+      "file": "kilo.svg",
+      "source_url": "https://kilocode.ai/favicon/favicon.svg",
+      "format": "svg",
+      "official": true,
+      "notes": "Official Kilo Code favicon/logo mark from kilocode.ai, 32x32 viewBox (vector)."
+    },
+    {
+      "id": "auggie",
+      "file": "auggie.svg",
+      "source_url": "https://www.augmentcode.com/favicon.svg",
+      "format": "svg",
+      "official": true,
+      "notes": "Official Augment Code brace mark from augmentcode.com, 512x512 viewBox."
+    },
+    {
+      "id": "neovate",
+      "file": "neovate.png",
+      "source_url": "https://mdn.alipayobjects.com/huamei_9rin5s/afts/img/0uIJQaelzccAAAAAQCAAAAgADiB8AQFr/original",
+      "format": "png",
+      "official": true,
+      "notes": "Official Neovate logo referenced in the neovateai/neovate-code README, hosted on Alibaba's CDN, 240x240 PNG."
+    },
+    {
+      "id": "open-interpreter",
+      "file": "open-interpreter.svg",
+      "source_url": "https://raw.githubusercontent.com/openinterpreter/openinterpreter/main/logo/light.svg",
+      "format": "svg",
+      "official": true,
+      "notes": "Official Open Interpreter logo from the logo/light.svg asset in the openinterpreter/openinterpreter repository (minimal ring mark)."
+    },
+    {
+      "id": "aichat",
+      "file": null,
+      "source_url": null,
+      "format": null,
+      "official": false,
+      "notes": "NOT FOUND. The sigoden/aichat repository (full tree checked) and its documentation publish no logo/icon asset; README only contains terminal screenshots. No official product logo exists to download. Not substituted with the author's personal avatar."
+    },
+    {
+      "id": "forge",
+      "file": "forge.svg",
+      "source_url": "https://forgecode.dev/shared/brand/favicon.svg",
+      "format": "svg",
+      "official": true,
+      "notes": "Official Forge brand favicon from forgecode.dev, 32x32 viewBox."
+    },
+    {
+      "id": "codebuff",
+      "file": "codebuff.png",
+      "source_url": "https://www.codebuff.com/favicon/logo-and-name.ico",
+      "format": "png",
+      "official": true,
+      "notes": "Official Codebuff logo-and-name mark from the codebuff.com favicon assets. Source file is a 621x192 PNG-compressed ICO; converted losslessly to PNG. Site publishes no SVG."
+    },
+    {
+      "id": "gitlab-duo",
+      "file": "gitlab-duo.svg",
+      "source_url": "https://cdn.simpleicons.org/gitlab",
+      "format": "svg",
+      "official": true,
+      "notes": "Official GitLab tanuki mark via Simple Icons. Parent-brand logo; GitLab Duo CLI uses GitLab branding (no separate confirmed Duo vector mark used here)."
+    },
+    {
+      "id": "rovodev",
+      "file": "rovodev.svg",
+      "source_url": "https://raw.githubusercontent.com/atlassian/atlascode/main/resources/dark/rovodev-icon.svg",
+      "format": "svg",
+      "official": true,
+      "notes": "Official Rovo Dev icon from Atlassian's own atlassian/atlascode repository (resources/dark/rovodev-icon.svg)."
+    }
+  ]
+}
